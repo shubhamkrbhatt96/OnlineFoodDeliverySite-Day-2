@@ -1,0 +1,246 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 56px;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Bar:Logo and Image */
+#logo {
+    margin: 5px 20px;
+}
+
+#logo img {
+    height: 100px;
+    margin: 3px 6px;
+}
+
+/* navbar target */
+#navbar {
+    position: relative;
+    display: flex;
+    top: 0px;
+    /* width: 100vw; */
+    align-items: center;
+}
+
+/* Navigation Bar:List Styling */
+#navbar ul {
+    display: flex;
+}
+
+#navbar::before {
+    /* know the sighificance of content on the navbar before. */
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    /* by writing the z-index as -1 the contents gets appeared on the black background */
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li {
+    /* the dots coming on the list of the elements gets vanishes. */
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    /* given display as block because we have to give padding. */
+    display: block;
+    color: white;
+    padding: 3px 22px;
+    border-radius: 22px;
+    /* By doing so the underline statement vanishes on screen of navbar elements(text-decoration:none) */
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    /* given display as block because we have to give padding. */
+    display: block;
+    background-color: white;
+    color: black;
+}
+
+/* Home Section Edit. */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 430px;
+}
+
+#home::before {
+    /* know the sighificance of content on the navbar before. */
+    content: "";
+    /* kept the image outside the css so used .. sign for the url part. */
+    background: url('../homebackground.jpg') no-repeat center center/cover;
+    height: 555px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    /* by writing the z-index as -1 the contents gets appeared on the black background */
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Utility classk */
+.h-primary {
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Domine', serif;
+}
+
+.h-secondary {
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: 'Domine', serif;
+}
+
+#home h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Domine', serif;
+}
+
+#home p {
+    font-size: 2.5rem;
+    color: darkmagenta;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid red;
+    color: white;
+    background: brown;
+    font-weight: bold;
+    margin: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: yellowgreen;
+    z-index: -1;
+}
+
+/* utility class */
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+/* services section */
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid red;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    border-radius: 23px;
+    background-color: lightgrey;
+    top: 0px;
+    left: 0px;
+
+}
+
+#services .box img {
+    height: 250px;
+    /* So to bring the image into center we have to keep display as block and then set the margin as auto by doing so you get the contenta and image in center */
+    display: block;
+    margin: auto;
+}
+
+#services .box p {
+    font-family: 'Domine', serif;
+}
+
+/* Clients Section */
+#client-section {
+    height: 400px;
+    position: relative;
+}
+
+#client-section::before {
+    height: 344px;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 330px;
+}
+
+#clients img {
+    height: 250px;
+}
+
+.client-items {
+    padding: 34px;
+}
+
+/* pseudo selectors used here in css */
+.client-items::before {
+    content: "";
+    position: absolute;
+    background: url('../sponsor-background.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 75%;
+    z-index: -1;
+    display: block;
+}
+
+/* Contact Section */
+#contact {
+    position: relative;
+}
+#contact-box {
+    height: 250px;
+    position: relative;
+}
+#contact-box::before {
+    height: 200px;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 73%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contactus.jpg') no-repeat center center/cover;
+}
+
+#contact{
+    display: flex;
+    height: 330px;
+}
+#contact img {
+    height: 300px;
+}
+
